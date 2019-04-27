@@ -1,0 +1,29 @@
+﻿<Page x:Class="MultimediaFeedback.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MultimediaFeedback"
+      mc:Ignorable="d" 
+      d:DesignHeight="482" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <Label Name="labelHeader" Content="Dein Feedback (A-Godi)" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="38" Width="794" HorizontalContentAlignment="Center"/>
+
+        <Image Name="imageHappy" Source="images/happy_face.png" HorizontalAlignment="Left" Height="220" Margin="66,138,0,0" VerticalAlignment="Top" Width="180" MouseLeftButtonDown="happy_clicked" MouseEnter="happy_mouseEnter" MouseLeave="happy_mouseLeave"/>
+        <Label Content="Keine technischen&#xD;&#xA;       Probleme" HorizontalAlignment="Left" Margin="49,358,0,0" VerticalAlignment="Top" FontSize="20" Width="197" HorizontalContentAlignment="Center"/>
+        <Image Name="imageSad" Source="images/sad_face.png" HorizontalAlignment="Left" Height="306" Margin="278,105,0,0" VerticalAlignment="Top" Width="250" MouseLeftButtonDown="sad_clicked" MouseEnter="sad_mouseEnter" MouseLeave="sad_mouseLeave"/>
+        <Label Content="Technisches Problem&#xD;&#xA;           melden" HorizontalAlignment="Left" Margin="313,358,0,0" VerticalAlignment="Top" FontSize="20" Width="197" HorizontalContentAlignment="Center"/>
+        <Image Name="imageIdea" Source="images/light_bulb.png" HorizontalAlignment="Left" Height="220" Margin="566,138,0,0" VerticalAlignment="Top" Width="180" MouseLeftButtonDown="idea_clicked" MouseEnter="idea_mouseEnter" MouseLeave="idea_mouseLeave"/>
+        <Label Content="   Eine Idee&#xD;&#xA;weitergeben" HorizontalAlignment="Left" Margin="566,358,0,0" VerticalAlignment="Top" FontSize="20" Width="197" HorizontalContentAlignment="Center"/>
+
+
+        <Image Name="imageHelp" Source="images/help.png" HorizontalAlignment="Left" Height="64" Margin="695,10,0,0" VerticalAlignment="Top" Width="51" MouseLeftButtonDown="help_clicked"  RenderOptions.BitmapScalingMode="HighQuality" MouseEnter="help_mouseEnter" MouseLeave="help_mouseLeave" />
+        <Label Content="Hilfe" HorizontalAlignment="Left" Margin="621,61.543,-18,0" VerticalAlignment="Top" FontSize="20" Width="197" HorizontalContentAlignment="Center"/>
+
+        <Label Content="V 1.3" HorizontalAlignment="Left" Margin="-74,453,0,0" VerticalAlignment="Top" FontSize="14" Width="197" HorizontalContentAlignment="Center"/>
+
+        <WebBrowser Name="browser" Visibility="Hidden"></WebBrowser>
+    </Grid>
+</Page>

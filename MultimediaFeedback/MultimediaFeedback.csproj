@@ -33,9 +33,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack.NetCore, Version=1.5.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.NetCore.1.5.0.1\lib\net45\HtmlAgilityPack.NetCore.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,12 +69,70 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Tests\LoginBeamer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tests\IsYtStreamOffline.cs" />
+    <Compile Include="Controller\FormController.cs" />
+    <Compile Include="Controller\HelperController.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageHelp1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageHelp2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageHappy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageIdea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSubmitted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\FeedbackData.cs" />
+    <Compile Include="Model\FeedbackType.cs" />
+    <Compile Include="Model\ServiceType.cs" />
+    <Compile Include="PageHelp1.xaml.cs">
+      <DependentUpon>PageHelp1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageHelp2.xaml.cs">
+      <DependentUpon>PageHelp2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageHappy.xaml.cs">
+      <DependentUpon>PageHappy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageIdea.xaml.cs">
+      <DependentUpon>PageIdea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSad.xaml.cs">
+      <DependentUpon>PageSad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSubmitted.xaml.cs">
+      <DependentUpon>PageSubmitted.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +150,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +158,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\happy_face.png" />
+    <Resource Include="images\light_bulb.png" />
+    <Resource Include="images\sad_face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\manual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\songbeamer.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="help\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\circuit-board.png" />
+    <Resource Include="images\livestream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\circuit_board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pulpit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

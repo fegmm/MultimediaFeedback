@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultimediaFeedback"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Medientechnik - Feedback" Height="520" Width="800" ResizeMode="CanMinimize">
+    <Frame Name="pageNavigation" HorizontalAlignment="Left" Height="492" VerticalAlignment="Top" Width="790" NavigationUIVisibility="Hidden" Loaded="Window_Loaded" Margin="0,0,0,-1"/>
 </Window>

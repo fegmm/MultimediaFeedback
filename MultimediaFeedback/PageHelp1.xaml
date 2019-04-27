@@ -1,0 +1,23 @@
+﻿<Page x:Class="MultimediaFeedback.PageHelp1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MultimediaFeedback"
+      mc:Ignorable="d" 
+      d:DesignHeight="492" d:DesignWidth="800"
+      Title="PageHelp">
+
+    <Grid>
+        <Label Name="labelHeader" Content="Medientechnik - Hilfe" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="38" Width="794" HorizontalContentAlignment="Center"/>
+
+        <Image Name="imageManual" Source="images/manual.png" HorizontalAlignment="Left" Height="220" Margin="50.141,132.269,0,0" VerticalAlignment="Top" Width="180" MouseLeftButtonDown="manual_clicked" MouseEnter="manual_mouseEnter" MouseLeave="manual_mouseLeave"/>
+        <Label Content=" Medientechnik-&#xD;&#xA;Anleitung öffnen" HorizontalAlignment="Left" Margin="6.141,357.268,0,0" VerticalAlignment="Top" FontSize="20" Width="221" HorizontalContentAlignment="Center"/>
+        <Image Name="imageSongbeamer" Source="images/songbeamer.png" HorizontalAlignment="Left" Height="220" Margin="257.459,132.269,0,0" VerticalAlignment="Top" Width="180" MouseLeftButtonDown="songbeamer_clicked" MouseEnter="songbeamer_mouseEnter" MouseLeave="songbeamer_mouseLeave"/>
+        <Label Content="Songbeamer-Anleitung&#xA;           öffnen" HorizontalAlignment="Left" Margin="245.459,357.268,0,0" VerticalAlignment="Top" FontSize="20" Width="221" HorizontalContentAlignment="Center"/>
+        <Image Name="imageSolvingTools" Source="images/checklist.png" HorizontalAlignment="Left" Height="215" Margin="499.459,137.269,0,0" VerticalAlignment="Top" Width="176" MouseLeftButtonDown="solvingTools_clicked" MouseEnter="tools_mouseEnter" MouseLeave="tools_mouseLeave"/>
+        <Label Content="Checkliste öffnen" HorizontalAlignment="Left" Margin="499.459,370.268,0,0" VerticalAlignment="Top" FontSize="20" Width="197" HorizontalContentAlignment="Center"/>
+        <Button x:Name="buttonBack" Content="Zurück" HorizontalAlignment="Left" Margin="26.5,24.543,0,0" VerticalAlignment="Top" Width="78.5" Height="32.5" Click="back_clicked" AutomationProperties.HelpText="Abbrechen und zum Auswahlmenü zurück." FontSize="16"/>
+        <Button x:Name="buttonNextPage" Content="&gt;" HorizontalAlignment="Left" Margin="699.621,125.483,0,0" VerticalAlignment="Top" Width="78.5" Height="192.602" Click="buttonNextPage_Click" AutomationProperties.HelpText="Zur nächsten Hilfe-Seite" FontSize="100" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF1C54B6" Background="{x:Null}"/>
+    </Grid>
+</Page>
